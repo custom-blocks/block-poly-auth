@@ -9,9 +9,9 @@
   ],
   "packages": [
     {
-      "file": "services/gateway/go.mod",
+      "file": "services/admin/composer.json",
       "dependencies": {
-        "github.com/google/uuid": "v1.5.0"
+        "monolog/monolog": "^2.9"
       }
     }
   ]
