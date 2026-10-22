@@ -9,9 +9,9 @@
   ],
   "packages": [
     {
-      "file": "services/api/pyproject.toml",
+      "file": "services/worker/requirements.txt",
       "dependencies": {
-        "Pydantic_Settings": ">=2.3"
+        "celery": "==5.3.6"
       }
     }
   ]
