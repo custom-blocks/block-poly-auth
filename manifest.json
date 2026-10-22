@@ -9,9 +9,9 @@
   ],
   "packages": [
     {
-      "file": "services/admin/composer.json",
+      "file": "services/billing/Gemfile",
       "dependencies": {
-        "monolog/monolog": "^2.9"
+        "opentelemetry-sdk": "~> 1.3"
       }
     }
   ]
