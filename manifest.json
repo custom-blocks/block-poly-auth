@@ -9,9 +9,9 @@
   ],
   "packages": [
     {
-      "file": "apps/web/package.json",
-      "devDependencies": {
-        "vitest": "^1.6.0"
+      "file": "services/api/pyproject.toml",
+      "dependencies": {
+        "uvicorn": ">=0.25"
       }
     }
   ]
