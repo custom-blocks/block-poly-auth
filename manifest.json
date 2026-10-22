@@ -9,9 +9,9 @@
   ],
   "packages": [
     {
-      "file": "services/billing/Gemfile",
-      "dependencies": {
-        "opentelemetry-sdk": "~> 1.3"
+      "file": "services/worker/requirements.txt",
+      "devDependencies": {
+        "fakeredis": ">=2.20"
       }
     }
   ]
