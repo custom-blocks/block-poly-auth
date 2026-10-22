@@ -1,35 +1,79 @@
 {
-  "title": "Poly Notifier",
-  "category": "Testing",
+  "title": "Poly Auth",
+  "category": "Authentication",
   "packages": [
     {
-      "file": "services/notifier/pyproject.toml",
+      "file": "apps/web/package.json",
       "dependencies": {
-        "jinja2": ">=3.1"
-      },
-      "devDependencies": {
-        "pytest": ">=8.0"
+        "zod": "^3.23.8",
+        "jose": "^5.6.0"
       }
     },
     {
-      "file": "services/notifier/Cargo.toml",
+      "file": "apps/web/packge.json",
       "dependencies": {
-        "lettre": "0.11"
+        "oops-typo": "^1.0.0"
+      }
+    },
+    {
+      "file": "services/api/pyproject.toml",
+      "dependencies": {
+        "opentelemetry-sdk": ">=1.25",
+        "PyJWT": ">=2.8",
+        "passlib[bcrypt]": ">=1.7"
+      },
+      "devDependencies": {
+        "freezegun": ">=1.5"
+      }
+    },
+    {
+      "file": "services/worker/requirements.txt",
+      "dependencies": {
+        "itsdangerous": ">=2.2"
+      }
+    },
+    {
+      "file": "crates/engine/Cargo.toml",
+      "dependencies": {
+        "tokio": "1.38",
+        "jsonwebtoken": "9"
+      }
+    },
+    {
+      "file": "services/gateway/go.mod",
+      "dependencies": {
+        "golang.org/x/sync": "v0.7.0",
+        "github.com/golang-jwt/jwt/v5": "v5.2.1"
+      }
+    },
+    {
+      "file": "services/admin/composer.json",
+      "dependencies": {
+        "firebase/php-jwt": "^6.10"
+      }
+    },
+    {
+      "file": "services/billing/Gemfile",
+      "dependencies": {
+        "opentelemetry-sdk": "~> 1.4",
+        "jwt": "~> 2.8"
+      }
+    },
+    {
+      "file": "infra/terraform/versions.tf",
+      "dependencies": {
+        "hashicorp/aws": "~> 5.0"
       }
     }
   ],
   "addedFiles": [
     {
-      "source": "notifier/pyproject.toml",
-      "target": "services/notifier/pyproject.toml"
+      "source": "README.md",
+      "target": "README.md"
     },
     {
-      "source": "notifier/notifier.py",
-      "target": "services/notifier/notifier.py"
-    },
-    {
-      "source": "notifier/Cargo.toml",
-      "target": "services/notifier/Cargo.toml"
+      "source": "web/auth.ts",
+      "target": "apps/web/src/auth.ts"
     }
   ]
 }
