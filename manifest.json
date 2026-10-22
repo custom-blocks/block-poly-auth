@@ -9,9 +9,9 @@
   ],
   "packages": [
     {
-      "file": "crates/engine/Cargo.toml",
+      "file": "services/gateway/go.mod",
       "dependencies": {
-        "serde": "1.0.200"
+        "github.com/google/uuid": "v1.5.0"
       }
     }
   ]
