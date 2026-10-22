@@ -11,7 +11,7 @@
     {
       "file": "apps/web/package.json",
       "dependencies": {
-        "vitest": "^1.6.0"
+        "zod": "^3.22.4"
       }
     }
   ]
