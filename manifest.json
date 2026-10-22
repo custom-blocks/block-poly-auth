@@ -9,9 +9,9 @@
   ],
   "packages": [
     {
-      "file": "services/worker/requirements.txt",
+      "file": "crates/engine/Cargo.toml",
       "dependencies": {
-        "celery": "==5.3.6"
+        "serde": "1.0.200"
       }
     }
   ]
