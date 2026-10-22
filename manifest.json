@@ -1,66 +1,35 @@
 {
-  "title": "Poly Edge Formats",
+  "title": "Poly Notifier",
   "category": "Testing",
   "packages": [
     {
-      "file": "services/search/pyproject.toml",
+      "file": "services/notifier/pyproject.toml",
       "dependencies": {
-        "orjson": ">=3.10",
-        "elastic_transport": "~=8.15",
-        "tenacity": ">=8.3"
+        "jinja2": ">=3.1"
       },
       "devDependencies": {
-        "pytest": ">=8.2",
-        "respx": ">=0.21"
+        "pytest": ">=8.0"
       }
     },
     {
-      "file": "crates/cli/Cargo.toml",
+      "file": "services/notifier/Cargo.toml",
       "dependencies": {
-        "clap": "4.5",
-        "engine": "0.1.0"
-      },
-      "devDependencies": {
-        "assert_cmd": "2"
-      }
-    },
-    {
-      "file": "services/edge/go.mod",
-      "dependencies": {
-        "github.com/valyala/fasthttp": "v1.55.0",
-        "golang.org/x/text": "v0.16.0"
-      }
-    },
-    {
-      "file": "apps/mobile/package.json",
-      "dependencies": {
-        "zod": "^3.23.8",
-        "@scope/pkg": "workspace:*"
-      },
-      "devDependencies": {
-        "@types/node": "^22.0.0"
-      }
-    },
-    {
-      "file": "crates/engine/Cargo.toml",
-      "dependencies": {
-        "tokio": "1.38"
-      },
-      "devDependencies": {
-        "insta": "1.39"
-      }
-    },
-    {
-      "file": "services/gateway/go.mod",
-      "dependencies": {
-        "golang.org/x/text": "v0.16.0"
+        "lettre": "0.11"
       }
     }
   ],
   "addedFiles": [
     {
-      "source": "notes.txt",
-      "target": "docs/edge-formats.txt"
+      "source": "notifier/pyproject.toml",
+      "target": "services/notifier/pyproject.toml"
+    },
+    {
+      "source": "notifier/notifier.py",
+      "target": "services/notifier/notifier.py"
+    },
+    {
+      "source": "notifier/Cargo.toml",
+      "target": "services/notifier/Cargo.toml"
     }
   ]
 }
