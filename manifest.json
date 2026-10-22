@@ -9,9 +9,9 @@
   ],
   "packages": [
     {
-      "file": "services/worker/requirements.txt",
-      "devDependencies": {
-        "fakeredis": ">=2.20"
+      "file": "apps/web/package.json",
+      "dependencies": {
+        "vitest": "^1.6.0"
       }
     }
   ]
