@@ -1,18 +1,66 @@
 {
-  "title": "Poly Conflict",
+  "title": "Poly Edge Formats",
   "category": "Testing",
-  "addedFiles": [
-    {
-      "source": "conflict.txt",
-      "target": "docs/conflict.txt"
-    }
-  ],
   "packages": [
     {
-      "file": "apps/web/package.json",
+      "file": "services/search/pyproject.toml",
       "dependencies": {
-        "vitest": "^1.6.0"
+        "orjson": ">=3.10",
+        "elastic_transport": "~=8.15",
+        "tenacity": ">=8.3"
+      },
+      "devDependencies": {
+        "pytest": ">=8.2",
+        "respx": ">=0.21"
       }
+    },
+    {
+      "file": "crates/cli/Cargo.toml",
+      "dependencies": {
+        "clap": "4.5",
+        "engine": "0.1.0"
+      },
+      "devDependencies": {
+        "assert_cmd": "2"
+      }
+    },
+    {
+      "file": "services/edge/go.mod",
+      "dependencies": {
+        "github.com/valyala/fasthttp": "v1.55.0",
+        "golang.org/x/text": "v0.16.0"
+      }
+    },
+    {
+      "file": "apps/mobile/package.json",
+      "dependencies": {
+        "zod": "^3.23.8",
+        "@scope/pkg": "workspace:*"
+      },
+      "devDependencies": {
+        "@types/node": "^22.0.0"
+      }
+    },
+    {
+      "file": "crates/engine/Cargo.toml",
+      "dependencies": {
+        "tokio": "1.38"
+      },
+      "devDependencies": {
+        "insta": "1.39"
+      }
+    },
+    {
+      "file": "services/gateway/go.mod",
+      "dependencies": {
+        "golang.org/x/text": "v0.16.0"
+      }
+    }
+  ],
+  "addedFiles": [
+    {
+      "source": "notes.txt",
+      "target": "docs/edge-formats.txt"
     }
   ]
 }
